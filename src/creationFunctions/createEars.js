@@ -36,8 +36,10 @@ function createEars(options, idPrefix) {
   ears.style.width = "380px";
   let leftEar = createEar(options, "left");
   leftEar.setAttribute("id", `cat${idPrefix}-left-ear`);
+  leftEar.setAttribute('class', 'left-ear');
   let rightEar = createEar(options, "right");
   rightEar.setAttribute("id", `cat${idPrefix}-right-ear`);
+  rightEar.setAttribute('class', 'right-ear');
   ears.appendChild(leftEar);
   ears.appendChild(rightEar);
   return ears;
