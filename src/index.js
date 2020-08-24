@@ -9,22 +9,20 @@ let catFactory = new CatFactory();
 
 // Create whatever cats you'd like, passing in whatever options you'd like
 catFactory.create('', { digitalClock: true }, true);
-catFactory.create('', {
+catFactory.create('Asia/Hong_Kong', {
   catColor: "green"
 }, true);
 catFactory.create("Europe/London", { catColor: "red" });
-console.log('catList', catList);
-// catList[2].addStyles({
-//   leftEyeColor: "blue",
-//   minuteMarkColor: "grey"
-// });
-// catList[1].addStyles({
-//   leftBackPawColor: "red",
-//   secondHandColor: "white",
-//   clockFaceColor: "rgb(23, 25, 22, 0.3)"
-// });
-catFactory.removeDefaults();
-console.log('catList', catList)
+catList[2].addStyles({
+  leftEyeColor: "blue",
+  minuteMarkColor: "grey"
+});
+catList[1].addStyles({
+  leftBackPawColor: "red",
+  secondHandColor: "white",
+  clockFaceColor: "rgb(23, 25, 22, 0.3)"
+});
+
 window.requestAnimationFrame(clock);
 
 if (availableWidth > 600) {
