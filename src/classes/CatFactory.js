@@ -64,7 +64,7 @@ function CatFactory() {
     catList.forEach(cat => {
       let catDiv = cat.cat;
       if (catDiv.default) {
-        document.body.removeChild(catDiv);
+        cats.removeChild(catDiv);
       } else {
         remainingCats.push(cat)
       }
