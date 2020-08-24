@@ -1,7 +1,6 @@
 import { CatFactory, catList } from './classes/CatFactory';
 import { defaultOptions } from './utils/defaultOptions';
 import { clock } from './animations/clockAnimation';
-import { availableWidth } from './initialization';
 import { gsap } from 'gsap';
 
 // Initialize the cat factory

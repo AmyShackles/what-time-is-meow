@@ -3,8 +3,8 @@ import { availableWidth } from '../initialization';
 import { catList } from '../classes/CatFactory';
 let requestId = null;
 
-function updateEye(selector) {
-  var element = document.getElementById(selector);
+function updateEye(parent, selector) {
+  var element = parent.querySelector(selector);
   if (availableWidth < 600) {
     const innerEye = element.querySelector(".eye-inner");
     if (innerEye.getAttribute("cx") === "25") {

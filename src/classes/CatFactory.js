@@ -6,7 +6,12 @@ import { updateEye } from '../animations/eyeAnimation';
 import { Cat } from './Cat';
 
 let catList = [];
+let cats = document.createElement('div');
+cats.setAttribute('class', 'cats');
+cats.style.background = defaultOptions.backgroundColor;
+cats.style.display = "flex";
 function CatFactory() {
+  this.cats = cats;
   this.catList = catList;
   this.create = function (timeZone = '', options, isDefault) {
     if (arguments.length === 1) {
@@ -31,10 +36,12 @@ function CatFactory() {
     let time = getTimeZone(timeZone);
     createClock(context, clock, time, options);
     let mouse = svg.createSVGPoint();
-    let leftEye = updateEye(`${cat.id}-left-eye`);
-    let rightEye = updateEye(`${cat.id}-right-eye`);
+    let leftEye = updateEye(cat, `#${cat.id}-left-eye`);
+    let rightEye = updateEye(cat, `#${cat.id}-right-eye`);
     let point = mouse.matrixTransform(svg.getScreenCTM().inverse());
     cat.default = isDefault;
+    cats.appendChild(cat);
+    this.cats = cats;
     const newCat = new Cat(
       svg,
       clock,
@@ -63,7 +70,6 @@ function CatFactory() {
     catList = remainingCats;
     this.catList = catList;
   }
-
 }
 
-export { CatFactory, catList };
+export { CatFactory, catList, cats };

@@ -488,6 +488,21 @@ The border color maps to `defaultOptions.clockOutlineColor`. The background colo
 
 You can opt to use military time (24-hour) by passing `{militaryTime: true}` to the create function.
 
+### Ear and Tail Animation
+
+There is an optional animation included in the package that makes the cat tails swish back and forth and their ears lean from side to side.  If you'd like to utilize this optional animation, simply import it from the package and call it after creating your cats.
+
+```
+import { catFactory, animation } from 'what-time-is-meow-v2'
+
+function App () {
+  catFactory.create();
+  animation();
+  return (
+    
+  )
+}
+
 ## Example Usage
 
 In index.js:
@@ -523,6 +538,3 @@ catList[1].addStyles({
 
 This template changes the clockWidth and clockHeight after initializing the defaultOptions object (alterations can be found in the [defaultOptions.js](./src/utils/defaultOptions.js) file) in order to check if the digitalClock mode is activated or not -- the width and height are different in analog and digital modes.
 
-#### Screen Sizes
-
-In order to reduce the friction of the animation on smaller screens, screens smaller than 600px wide have animation aside from the clock disabled.
