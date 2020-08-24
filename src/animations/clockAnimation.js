@@ -1,4 +1,4 @@
-import { catList } from '../initialization';
+import { catList } from '../classes/CatFactory';
 import { createClock } from '../creationFunctions/createClock';
 import { getTimeZone } from '../utils/getTimeZone';
 

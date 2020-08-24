@@ -38,8 +38,8 @@ function CatFactory() {
       cat,
       options)
     catList.push(newCat);
-    return newCat;
+    return { newCat, catList };
   };
 }
 
-export { CatFactory };
+export { CatFactory, catList };

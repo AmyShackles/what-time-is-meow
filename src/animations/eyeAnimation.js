@@ -1,6 +1,6 @@
 import { gsap } from 'gsap'
-import { availableWidth, catList} from '../initialization';
-
+import { availableWidth } from '../initialization';
+import { catList } from '../classes/CatFactory';
 let requestId = null;
 
 function updateEye(selector) {
