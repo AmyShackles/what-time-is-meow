@@ -5,11 +5,11 @@ import { defaultOptions } from './utils/defaultOptions';
 let catFactory = new CatFactory();
 
 // Create whatever cats you'd like, passing in whatever options you'd like
-catFactory.create({ digitalClock: true });
-catFactory.create({
+catFactory.create('', { digitalClock: true }, true);
+catFactory.create('', {
   catColor: "green"
-});
-catFactory.create("Europe/London", { catColor: "red" });
+}, true);
+catFactory.create("Europe/London", { catColor: "red" }, true);
 catList[2].addStyles({
   leftEyeColor: "blue",
   minuteMarkColor: "grey"

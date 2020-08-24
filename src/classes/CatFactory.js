@@ -8,7 +8,7 @@ import { Cat } from './Cat';
 let catList = [];
 function CatFactory() {
   this.catList = catList;
-  this.create = function (timeZone = '', options) {
+  this.create = function (timeZone = '', options, isDefault) {
     if (arguments.length === 1) {
       options = arguments[0];
       timeZone = "";
@@ -34,6 +34,7 @@ function CatFactory() {
     let leftEye = updateEye(`${cat.id}-left-eye`);
     let rightEye = updateEye(`${cat.id}-right-eye`);
     let point = mouse.matrixTransform(svg.getScreenCTM().inverse());
+    cat.default = isDefault;
     const newCat = new Cat(
       svg,
       clock,
@@ -50,10 +51,16 @@ function CatFactory() {
     return newCat;
   };
   this.removeDefaults = function() {
-    catList.forEach(({cat}) => {
-      document.body.removeChild(cat);
+    let remainingCats = [];
+    catList.forEach(cat => {
+      let catDiv = cat.cat;
+      if (catDiv.default) {
+        document.body.removeChild(catDiv);
+      } else {
+        remainingCats.push(cat)
+      }
     })
-    catList = [];
+    catList = remainingCats;
     this.catList = catList;
   }
 
