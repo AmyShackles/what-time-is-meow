@@ -49,7 +49,13 @@ function CatFactory() {
     this.catList = catList;
     return newCat;
   };
-  this.cats = () => this.catList;
+  this.removeDefaults = function() {
+    catList.forEach(({cat}) => {
+      document.body.removeChild(cat);
+    })
+    catList = [];
+    this.catList = catList;
+  }
 
 }
 

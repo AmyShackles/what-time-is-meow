@@ -10,7 +10,6 @@ catFactory.create({
   catColor: "green"
 });
 catFactory.create("Europe/London", { catColor: "red" });
-
 catList[2].addStyles({
   leftEyeColor: "blue",
   minuteMarkColor: "grey"
@@ -20,5 +19,6 @@ catList[1].addStyles({
   secondHandColor: "white",
   clockFaceColor: "rgb(23, 25, 22, 0.3)"
 });
+
 
 export { catFactory, defaultOptions }
