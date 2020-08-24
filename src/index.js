@@ -62,6 +62,7 @@ function animate() {
     .to(".tail", { duration: 8, rotationY: 0, rotationX: 0, x: 0 }, "second");
     return animation;
 }
+document.body.appendChild(catFactory.cats)
 
 const animation = () => animate();
 export { catFactory, defaultOptions, animation }

@@ -12,6 +12,9 @@ cats.style.background = defaultOptions.backgroundColor;
 cats.style.display = "flex";
 function CatFactory() {
   this.cats = cats;
+  if (!document.querySelector('.cats')) {
+
+  }
   this.catList = catList;
   this.create = function (timeZone = '', options, isDefault) {
     if (arguments.length === 1) {
@@ -41,7 +44,6 @@ function CatFactory() {
     let point = mouse.matrixTransform(svg.getScreenCTM().inverse());
     cat.default = isDefault;
     cats.appendChild(cat);
-    this.cats = cats;
     const newCat = new Cat(
       svg,
       clock,
