@@ -1,5 +1,5 @@
 import { defaultOptions } from '../utils/defaultOptions';
-import { catInit, timeZoneList } from '../initialization';
+import { catInit, timeZoneList, catList } from '../initialization';
 import { getTimeZone } from '../utils/getTimeZone';
 import { createClock } from '../creationFunctions/createClock';
 import { updateEye } from '../animations/eyeAnimation';
@@ -28,8 +28,7 @@ function CatFactory() {
     let leftEye = updateEye(`${cat.id}-left-eye`);
     let rightEye = updateEye(`${cat.id}-right-eye`);
     let point = mouse.matrixTransform(svg.getScreenCTM().inverse());
-    return new Cat(
-      svg,
+    const newCat = new Cat(svg,
       clock,
       context,
       leftEye,
@@ -37,8 +36,9 @@ function CatFactory() {
       mouse,
       point,
       cat,
-      options
-    );
+      options)
+    catList.push(newCat);
+    return newCat;
   };
 }
 

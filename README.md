@@ -152,12 +152,6 @@ let berlinCat = catFactory.create("Europe/Berlin", {
   tailColor: "green"
 });
 
-// Cats pushed to an array in order to access them by index
-catList.push(localCat);
-catList.push(sidneyCat);
-catList.push(londonCat);
-catList.push(berlinCat);
-
 catList[2].addStyles({
   leftEyeColor: "blue",
   minuteMarkColor: "grey",
