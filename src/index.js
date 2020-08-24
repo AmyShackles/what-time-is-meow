@@ -63,5 +63,6 @@ function animate() {
     .to(".tail", { duration: 8, rotationY: 0, rotationX: 0, x: 0 }, "second");
     return animation;
 }
-  
-export { catFactory, defaultOptions, animate }
+
+const animation = () => animate();
+export { catFactory, defaultOptions, animation }
