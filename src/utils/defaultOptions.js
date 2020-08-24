@@ -3,7 +3,7 @@ const defaultOptions = {
   backgroundColor: "black",
   // Eyes
   browRidgeHeight: "90px",
-  eyesSVGPosition: "fixed",
+  eyesSVGPosition: "relative",
   eyesSVGHeight: "100px",
   eyesSVGWidth: "120px",
   eyesSVGPaddingTop: "5px",

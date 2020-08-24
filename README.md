@@ -16,10 +16,9 @@ Originally set defaults are as follows:
 const defaultOptions = {
   // Entire page
   backgroundColor: "black",
-  cursor: `url("mouse.png"), auto`,
   // Eyes
   browRidgeHeight: "90px",
-  eyesSVGPosition: "fixed",
+  eyesSVGPosition: "relative",
   eyesSVGHeight: "100px",
   eyesSVGWidth: "120px",
   eyesSVGPaddingTop: "5px",
