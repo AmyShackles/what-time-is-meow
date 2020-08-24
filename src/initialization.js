@@ -1,7 +1,6 @@
 import { createCat } from './creationFunctions/createCat';
 import { defaultOptions } from './utils/defaultOptions';
 let timeZoneList = [];
-let catList = [];
 let numCats = -1;
 document.body.style.backgroundColor = defaultOptions.backgroundColor;
 document.body.style.display = "flex";
@@ -17,4 +16,4 @@ function catInit(options) {
 }
 
 
-export { catInit, availableWidth, timeZoneList, catList }
+export { catInit, availableWidth, timeZoneList }

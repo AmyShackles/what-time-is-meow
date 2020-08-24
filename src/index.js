@@ -1,5 +1,4 @@
-import { CatFactory } from './classes/CatFactory';
-import { catList } from './initialization';
+import { CatFactory, catList } from './classes/CatFactory';
 import { defaultOptions } from './utils/defaultOptions';
 
 // Initialize the cat factory
@@ -22,4 +21,4 @@ catList[1].addStyles({
   clockFaceColor: "rgb(23, 25, 22, 0.3)"
 });
 
-export { catFactory, catList, defaultOptions }
+export { catFactory, defaultOptions }
