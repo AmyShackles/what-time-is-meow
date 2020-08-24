@@ -1,10 +1,10 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions'
 
 function createTorso(options) {
   options = { ...defaultOptions, ...options };
   let torso = document.createElement("div");
   torso.setAttribute("class", "torso");
-  torso.style.backgroundColor = options.torsoColor ?? options.catColor;
+  torso.style.backgroundColor = options.torsoColor ? options.torsoColor : options.catColor;
   torso.style.height = options.torsoHeight;
   torso.style.width = options.torsoWidth;
   torso.style.borderRadius = options.torsoBorderRadius;
@@ -56,3 +56,5 @@ function digitalClockInit(options) {
   clock.appendChild(second);
   return clock;
 }
+
+export { createTorso }

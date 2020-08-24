@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 function getTimeZone(timeZone) {
   if (timeZone) {
     let options = {
@@ -17,3 +15,5 @@ function getTimeZone(timeZone) {
     return new Date(Date.now());
   }
 }
+
+export { getTimeZone }

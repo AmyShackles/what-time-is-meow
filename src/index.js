@@ -1,4 +1,5 @@
-/* eslint-disable */
+import { CatFactory } from './classes/CatFactory';
+import { catList } from './initialization';
 
 // Initialize the cat factory
 let catFactory = new CatFactory();

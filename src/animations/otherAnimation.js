@@ -1,4 +1,5 @@
-/* eslint-disable */
+import { availableWidth } from '../initialization';
+import { gsap } from 'gsap';
 
 // Animation needs to be loaded last to ensure cats have been created
 

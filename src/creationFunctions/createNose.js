@@ -1,4 +1,4 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions';
 
 function createNose(options) {
   options = { ...defaultOptions, ...options };
@@ -32,10 +32,12 @@ function createNose(options) {
   nose.appendChild(roundBit);
   let philtrum = document.createElement("div");
   philtrum.setAttribute("class", "straight-bit");
-  philtrum.style.backgroundColor = options.philtrumColor ?? options.noseColor;
+  philtrum.style.backgroundColor = options.philtrumColor ? options.philtrumColor : options.noseColor;
   philtrum.style.height = options.philtrumHeight;
   philtrum.style.width = options.philtrumWidth;
   philtrum.style.margin = options.philtrumMargin;
   nose.appendChild(philtrum);
   return nose;
 }
+
+export { createNose }

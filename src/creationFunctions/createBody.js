@@ -1,4 +1,6 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions';
+import { createArm } from './createArm';
+import { createTorso } from './createTorso';
 
 function createBody(options, idPrefix) {
   options = { ...defaultOptions, ...options };
@@ -22,3 +24,5 @@ function createBody(options, idPrefix) {
   body.appendChild(rightArm);
   return { body, clock };
 }
+
+export { createBody };

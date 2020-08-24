@@ -1,4 +1,9 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions';
+import { catInit, timeZoneList } from '../initialization';
+import { getTimeZone } from '../utils/getTimeZone';
+import { createClock } from '../creationFunctions/createClock';
+import { updateEye } from '../animations/eyeAnimation';
+import { Cat } from './Cat';
 
 function CatFactory() {
   this.create = function (timeZone, options) {
@@ -36,3 +41,5 @@ function CatFactory() {
     );
   };
 }
+
+export { CatFactory };

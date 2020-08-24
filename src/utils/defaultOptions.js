@@ -1,9 +1,6 @@
-/* eslint-disable */
-
 const defaultOptions = {
   // Entire page
   backgroundColor: "black",
-  cursor: `url("../images/mouse.png"), auto`,
   // Eyes
   browRidgeHeight: "90px",
   eyesSVGPosition: "fixed",
@@ -96,3 +93,6 @@ const defaultOptions = {
 // These values are dependent on other values, so need to be set separately
 defaultOptions.clockHeight = defaultOptions.digitalClock ? "100px" : "300px";
 defaultOptions.clockWidth = defaultOptions.digitalClock ? "240px" : "300px";
+
+
+export { defaultOptions }

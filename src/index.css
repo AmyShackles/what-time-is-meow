@@ -1,5 +1,6 @@
 body, html {
   overflow: hidden;
+  cursor:  url("./images/mouse.png"), auto;
 }
 
 

@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 function convertAttributeToStyleProp(style) {
   if (/FrontPaw/gi.test(style)) {
     style = style.replace(/((?:left)|(?:right))FrontPaw/gi, "");
@@ -21,3 +19,5 @@ function convertAttributeToStyleProp(style) {
     return style[0].toLowerCase() + style.slice(1);
   }
 }
+
+export { convertAttributeToStyleProp };

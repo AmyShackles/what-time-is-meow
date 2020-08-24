@@ -1,4 +1,7 @@
-/* eslint-disable */
+import { gsap } from 'gsap'
+import { availableWidth, catList} from '../initialization';
+
+let requestId = null;
 
 function updateEye(selector) {
   var element = document.getElementById(selector);
@@ -10,7 +13,7 @@ function updateEye(selector) {
       innerEye.setAttribute("cx", "95");
     }
   }
-  TweenLite.set(element, {
+  gsap.set(element, {
     transformOrigin: "center"
   });
 
@@ -25,7 +28,7 @@ function updateEye(selector) {
 
       var angle = Math.atan2(dy, dx);
 
-      TweenLite.to(element, 0.3, {
+      gsap.to(element, 0.3, {
         rotation: angle + "_rad_short"
       });
     }
@@ -60,3 +63,5 @@ function onMouseMove(event) {
     requestId = requestAnimationFrame(onFrame);
   }
 }
+
+export { updateEye }

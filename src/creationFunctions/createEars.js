@@ -1,10 +1,11 @@
-/* eslint-disable */
+
+import { defaultOptions } from '../utils/defaultOptions';
 
 function createEar(options, side) {
   options = { ...defaultOptions, ...options };
   const ear = document.createElement("div");
   ear.setAttribute("class", `${side}-ear`);
-  ear.style.borderBottomColor = options[`${side}EarColor`] ?? options.catColor;
+  ear.style.borderBottomColor = options[`${side}EarColor`] ? options[`${side}EarColor`] : options.catColor;
   ear.style.borderBottomWidth = options[`${side}EarHeight`];
   ear.style.borderBottomStyle = "solid";
   ear.style.borderLeftColor = "transparent";
@@ -41,3 +42,5 @@ function createEars(options, idPrefix) {
   ears.appendChild(rightEar);
   return ears;
 }
+
+export { createEars };

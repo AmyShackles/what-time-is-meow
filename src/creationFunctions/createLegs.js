@@ -1,11 +1,11 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions';
 
 function createLeg(options, side) {
   options = { ...defaultOptions, ...options };
   let leg = document.createElement("div");
   leg.setAttribute("class", `${side}-leg`);
   leg.style.backgroundColor =
-    options[`${side}BackPawColor`] ?? options.catColor;
+    options[`${side}BackPawColor`] ? options[`${side}BackPawColor`] : options.catColor;
   leg.style.marginTop = options[`${side}BackPawMarginTop`];
   leg.style.borderRadius = options[`${side}BackPawBorderRadius`];
   leg.style.width = options[`${side}BackPawWidth`];
@@ -28,3 +28,5 @@ function createLegs(options, idPrefix) {
   legs.appendChild(rightLeg);
   return legs;
 }
+
+export { createLegs }

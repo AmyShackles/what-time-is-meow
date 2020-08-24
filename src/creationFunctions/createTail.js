@@ -1,11 +1,11 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions';
 
 function createTail(options, idPrefix) {
   options = { ...defaultOptions, ...options };
   let tail = document.createElement("div");
   tail.setAttribute("class", "tail");
   tail.setAttribute("id", `cat${idPrefix}-tail`);
-  tail.style.borderColor = options.tailColor ?? options.catColor;
+  tail.style.borderColor = options.tailColor ? options.tailColor : options.catColor;
   tail.style.borderRightWidth = options.tailRightBorderWidth;
   tail.style.borderBottomWidth = options.tailBottomBorderWidth;
   tail.style.borderRightStyle = "solid";
@@ -19,3 +19,5 @@ function createTail(options, idPrefix) {
   tail.style.zIndex = "-2";
   return tail;
 }
+
+export { createTail }

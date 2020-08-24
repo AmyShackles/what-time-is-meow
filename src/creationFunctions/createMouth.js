@@ -1,4 +1,4 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions';
 
 function createLip(options, side) {
   let lip = document.createElement("div");
@@ -30,3 +30,5 @@ function createMouth(options) {
   mouth.appendChild(rightLip);
   return mouth;
 }
+
+export { createMouth }

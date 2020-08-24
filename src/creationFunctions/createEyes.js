@@ -1,4 +1,4 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions';
 
 function createLeftEye(options) {
   options = { ...defaultOptions, ...options };
@@ -80,3 +80,5 @@ function createEyes(options, idPrefix) {
   eyes.appendChild(svg);
   return { eyes, svg };
 }
+
+export { createEyes }

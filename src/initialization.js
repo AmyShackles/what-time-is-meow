@@ -1,11 +1,10 @@
-/* eslint-disable */
-
+import { createCat } from './creationFunctions/createCat';
+import { defaultOptions } from './utils/defaultOptions';
 let timeZoneList = [];
 let catList = [];
 let numCats = -1;
 document.body.style.backgroundColor = defaultOptions.backgroundColor;
 document.body.style.display = "flex";
-document.body.style.cursor = defaultOptions.cursor;
 const screen = document.defaultView.screen;
 const availableWidth = screen.availWidth;
 function catInit(options) {
@@ -16,4 +15,6 @@ function catInit(options) {
   document.body.appendChild(cat);
   return { svg, clock, cat };
 }
-let requestId = null;
+
+
+export { catInit, availableWidth, timeZoneList, catList }

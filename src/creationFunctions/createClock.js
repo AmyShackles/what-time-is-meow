@@ -1,4 +1,4 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions';
 
 function createClock(ctx, clock, now, options) {
   options = { ...defaultOptions, ...options };
@@ -125,3 +125,5 @@ function createAnalogClock(ctx, now, options) {
 
   ctx.restore();
 }
+
+export { createClock };

@@ -1,4 +1,6 @@
-/* eslint-disable */
+import { catList } from '../initialization';
+import { createClock } from '../creationFunctions/createClock';
+import { getTimeZone } from '../utils/getTimeZone';
 
 function clock() {
   catList.forEach(({ clock, context, options }, index) => {
@@ -8,3 +10,5 @@ function clock() {
   window.requestAnimationFrame(clock);
 }
 window.requestAnimationFrame(clock);
+
+export { clock }

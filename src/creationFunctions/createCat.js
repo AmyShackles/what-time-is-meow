@@ -1,4 +1,9 @@
-/* eslint-disable */
+import { defaultOptions } from '../utils/defaultOptions';
+import { createEars } from './createEars';
+import { createHead } from './createHead';
+import { createBody } from './createBody';
+import { createLegs } from './createLegs';
+import { createTail } from './createTail';
 
 function createCat(options, idPrefix) {
   options = { ...defaultOptions, ...options };
@@ -22,3 +27,5 @@ function createCat(options, idPrefix) {
   cat.appendChild(tail);
   return { svg, clock, cat };
 }
+
+export { createCat };

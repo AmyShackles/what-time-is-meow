@@ -159,3 +159,5 @@ class Cat {
     });
   }
 }
+
+export { Cat }

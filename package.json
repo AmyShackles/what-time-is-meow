@@ -2,16 +2,22 @@
   "name": "what-time-is-meow-v2",
   "version": "2.0.0",
   "description": "Repository to extend a project started on Codepen, in order to safeguard it from the possibility of my cats stepping on the keyboard at an inopportune time and losing all of my code.",
-  "main": "index.js",
+  "main": "dist/what-time-is-meow.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "file-loader": "^6.0.0",
+    "http-server": "^0.12.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "gsap": "^3.5.0"
   }
 }
