@@ -1,0 +1,17 @@
+{
+  "name": "what-time-is-meow-v2",
+  "version": "2.0.0",
+  "description": "Repository to extend a project started on Codepen, in order to safeguard it from the possibility of my cats stepping on the keyboard at an inopportune time and losing all of my code.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
