@@ -2,7 +2,7 @@ import { CatFactory, catList } from './classes/CatFactory';
 import { defaultOptions } from './utils/defaultOptions';
 import { clock } from './animations/clockAnimation';
 import { gsap } from 'gsap';
-import { createPortals } from 'react-dom';
+import { createPortal } from 'react-dom';
 import { Component } from 'react';
 
 // Initialize the cat factory
