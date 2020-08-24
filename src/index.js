@@ -71,7 +71,7 @@ class CatPortal extends Component {
     this.element = document.createElement(props.component);
   }
   componentDidMount() {
-    this.props.arentEl.appendChild(this.element);
+    this.props.parentEl.appendChild(this.element);
   }
   componentWillUnmount() {
     this.props.parentEl.removeChild(this.element);
