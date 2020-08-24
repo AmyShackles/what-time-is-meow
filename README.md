@@ -4,11 +4,11 @@ Repository to extend a project started on Codepen, in order to safeguard it from
 
 **Cat Diagram**
 
-![CatDiagram](./images/catDiagram.png)
+![CatDiagram](./src/images/catDiagram.png)
 
 ## Default Properties
 
-Default options for the appearance of generated cats can be found and altered in [defaultOptions.js](./utils/defaultOptions.js);
+Default options for the appearance of generated cats can be found and altered in [defaultOptions.js](./src/utils/defaultOptions.js);
 
 Originally set defaults are as follows:
 
@@ -174,7 +174,7 @@ catList[1].addStyles({
 
 #### Clock Height and Clock Width
 
-This template changes the clockWidth and clockHeight after initializing the defaultOptions object (alterations can be found in the [defaultOptions.js](./utils/defaultOptions.js) file) in order to check if the digitalClock mode is activated or not -- the width and height are different in analog and digital modes.
+This template changes the clockWidth and clockHeight after initializing the defaultOptions object (alterations can be found in the [defaultOptions.js](./src/utils/defaultOptions.js) file) in order to check if the digitalClock mode is activated or not -- the width and height are different in analog and digital modes.
 
 #### Screen Sizes
 
