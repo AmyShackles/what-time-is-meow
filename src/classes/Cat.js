@@ -10,7 +10,8 @@ class Cat {
     mouse,
     point,
     cat,
-    options
+    options,
+    isDefault = false
   ) {
     this.svg = svg;
     this.clock = clock;
@@ -21,6 +22,7 @@ class Cat {
     this.point = point;
     this.cat = cat;
     this.options = options;
+    this.isDefault = isDefault;
   }
   styleEar([attribute, value], side) {
     const ear = this.cat.querySelector(`.${side}-ear`);

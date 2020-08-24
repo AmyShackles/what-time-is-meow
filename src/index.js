@@ -22,7 +22,6 @@ catList[1].addStyles({
   secondHandColor: "white",
   clockFaceColor: "rgb(23, 25, 22, 0.3)"
 });
-
 window.requestAnimationFrame(clock);
 
 function animate() {

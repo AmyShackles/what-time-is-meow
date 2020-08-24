@@ -35,7 +35,6 @@ function CatFactory() {
     let leftEye = updateEye(cat, `#${cat.id}-left-eye`);
     let rightEye = updateEye(cat, `#${cat.id}-right-eye`);
     let point = mouse.matrixTransform(svg.getScreenCTM().inverse());
-    cat.default = isDefault;
     const newCat = new Cat(
       svg,
       clock,
@@ -45,7 +44,8 @@ function CatFactory() {
       mouse,
       point,
       cat,
-      options
+      options,
+      isDefault
     );
     catList.push(newCat);
     this.catList = catList;
@@ -54,8 +54,10 @@ function CatFactory() {
   this.removeDefaults = function() {
     let remainingCats = [];
     catList.forEach(cat => {
-      let catDiv = cat.cat;
-      if (catDiv.default) {
+      const catDiv = cat.cat;
+      const { isDefault } = cat;
+
+      if (isDefault) {
         document.body.removeChild(catDiv);
       } else {
         remainingCats.push(cat)
