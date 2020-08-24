@@ -2,8 +2,7 @@ import { CatFactory, catList } from './classes/CatFactory';
 import { defaultOptions } from './utils/defaultOptions';
 import { clock } from './animations/clockAnimation';
 import { gsap } from 'gsap';
-import { createPortal } from 'react-dom';
-import { Component } from 'react';
+
 
 // Initialize the cat factory
 let catFactory = new CatFactory();
@@ -65,24 +64,5 @@ function animate() {
     return animation;
 }
 
-class CatPortal extends Component {
-  constructor(props) {
-    super(props);
-    this.element = document.createElement('div');
-  }
-  componentDidMount() {
-    this.props.parentEl.appendChild(this.element);
-  }
-  componentWillUnmount() {
-    this.props.parentEl.removeChild(this.element);
-  }
-  render() {
-    return createPortal(
-      catFactory.cats,
-      this.element
-    )
-  }
-}
-
 const animation = () => animate();
-export { catFactory, defaultOptions, animation, CatPortal }
+export { catFactory, defaultOptions, animation }
