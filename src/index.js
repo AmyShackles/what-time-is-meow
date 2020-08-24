@@ -1,5 +1,6 @@
 import { CatFactory } from './classes/CatFactory';
 import { catList } from './initialization';
+import { defaultOptions } from './utils/defaultOptions';
 
 // Initialize the cat factory
 let catFactory = new CatFactory();
@@ -27,4 +28,4 @@ catList[1].addStyles({
   clockFaceColor: "rgb(23, 25, 22, 0.3)"
 });
 
-export { CatFactory, catList }
+export { catFactory, catList, defaultOptions }
