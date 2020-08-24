@@ -12,7 +12,7 @@ catFactory.create('', { digitalClock: true }, true);
 catFactory.create('Asia/Hong_Kong', {
   catColor: "green"
 }, true);
-catFactory.create("Europe/London", { catColor: "red" });
+catFactory.create("Europe/London", { catColor: "red" }, true);
 catList[2].addStyles({
   leftEyeColor: "blue",
   minuteMarkColor: "grey"
@@ -25,7 +25,6 @@ catList[1].addStyles({
 
 window.requestAnimationFrame(clock);
 
-if (availableWidth > 600) {
   let animation = gsap.timeline({ onComplete: animationComplete });
   animation
     .to(
@@ -62,5 +61,4 @@ if (availableWidth > 600) {
   function animationComplete() {
     animation.restart();
   }
-}
-export { catFactory, defaultOptions }
+export { catFactory, defaultOptions, animation }
