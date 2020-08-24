@@ -25,6 +25,10 @@ catList[1].addStyles({
 
 window.requestAnimationFrame(clock);
 
+function animate() {
+  function animationComplete() {
+    animation.restart();
+  }
   let animation = gsap.timeline({ onComplete: animationComplete });
   animation
     .to(
@@ -57,8 +61,7 @@ window.requestAnimationFrame(clock);
     .to(".mouth .right-side", { duration: 1, rotation: 0 }, "second")
     .to(".mouth .left-side", { duration: 1, rotation: 0 }, "second")
     .to(".tail", { duration: 8, rotationY: 0, rotationX: 0, x: 0 }, "second");
-
-  function animationComplete() {
-    animation.restart();
-  }
-export { catFactory, defaultOptions, animation }
+    return animation;
+}
+  
+export { catFactory, defaultOptions, animate }
