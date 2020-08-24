@@ -5,8 +5,8 @@ import { defaultOptions } from './utils/defaultOptions';
 let catFactory = new CatFactory();
 
 // Create whatever cats you'd like, passing in whatever options you'd like
-catFactory.create("", { digitalClock: true });
-catFactory.create(`Australia/Sydney`, {
+catFactory.create({ digitalClock: true });
+catFactory.create({
   catColor: "green"
 });
 catFactory.create("Europe/London", { catColor: "red" });

@@ -8,7 +8,11 @@ import { Cat } from './Cat';
 let catList = [];
 function CatFactory() {
   this.catList = catList;
-  this.create = function (timeZone, options) {
+  this.create = function (timeZone = '', options) {
+    if (arguments.length === 1) {
+      options = arguments[0];
+      timeZone = "";
+    }
     options = { ...defaultOptions, ...options };
     let { svg, clock, cat } = catInit(options);
     let context = options.digitalClock ? {} : clock.getContext("2d");
@@ -18,7 +22,7 @@ function CatFactory() {
     timeZoneLabel.style.textAlign = "center";
     timeZoneLabel.style.fontSize = "20px";
     if (timeZone) {
-      timeZoneLabel.innerText = timeZone;
+      timeZoneLabel.innerText = timeZone.replace('_', ' ');
     } else {
       timeZoneLabel.innerText = "Local Time";
     }
