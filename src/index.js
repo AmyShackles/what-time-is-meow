@@ -68,7 +68,7 @@ function animate() {
 class CatPortal extends Component {
   constructor(props) {
     super(props);
-    this.element = document.createElement(props.component);
+    this.element = document.createElement('div');
   }
   componentDidMount() {
     this.props.parentEl.appendChild(this.element);
