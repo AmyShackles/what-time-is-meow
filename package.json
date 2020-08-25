@@ -19,6 +19,5 @@
   },
   "dependencies": {
     "gsap": "^3.5.0"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  }
 }
