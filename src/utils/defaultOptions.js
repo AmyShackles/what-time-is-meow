@@ -1,4 +1,4 @@
-const defaultOptions = {
+let defaultOptions = {
   // Entire page
   backgroundColor: "black",
   // Eyes

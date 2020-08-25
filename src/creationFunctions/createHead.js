@@ -1,10 +1,8 @@
-import { defaultOptions } from '../utils/defaultOptions';
 import { createEyes } from './createEyes';
 import { createNose } from './createNose';
 import { createMouth } from './createMouth';
 
 function createHead(options, idPrefix) {
-  options = { ...defaultOptions, ...options };
   let head = document.createElement("div");
   head.setAttribute("class", "head");
   head.setAttribute("id", `${idPrefix}-head`);

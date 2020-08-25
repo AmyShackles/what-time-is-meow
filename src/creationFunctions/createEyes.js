@@ -1,7 +1,5 @@
-import { defaultOptions } from '../utils/defaultOptions';
 
 function createLeftEye(options) {
-  options = { ...defaultOptions, ...options };
   let leftEye = document.createElementNS("http://www.w3.org/2000/svg", "g");
   let outerLeftEye = document.createElementNS(
     "http://www.w3.org/2000/svg",
@@ -29,7 +27,6 @@ function createLeftEye(options) {
 }
 
 function createRightEye(options) {
-  options = { ...defaultOptions, ...options };
   let rightEye = document.createElementNS("http://www.w3.org/2000/svg", "g");
   let outerRightEye = document.createElementNS(
     "http://www.w3.org/2000/svg",
@@ -58,7 +55,6 @@ function createRightEye(options) {
 }
 
 function createEyes(options, idPrefix) {
-  options = { ...defaultOptions, ...options };
   let eyes = document.createElement("div");
   eyes.setAttribute("class", "eyes");
   eyes.style.height = options.browRidgeHeight;

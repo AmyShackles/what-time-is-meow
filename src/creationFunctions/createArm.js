@@ -1,7 +1,5 @@
-import { defaultOptions} from '../utils/defaultOptions';
 
 function createArm(options, side) {
-  options = { ...defaultOptions, ...options };
   let arm = document.createElement("div");
   arm.setAttribute("class", `${side}-arm`);
   arm.style.backgroundColor =

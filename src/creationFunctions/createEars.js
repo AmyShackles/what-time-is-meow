@@ -1,8 +1,6 @@
 
-import { defaultOptions } from '../utils/defaultOptions';
 
 function createEar(options, side) {
-  options = { ...defaultOptions, ...options };
   const ear = document.createElement("div");
   ear.setAttribute("class", `${side}-ear`);
   ear.style.borderBottomColor = options[`${side}EarColor`] ? options[`${side}EarColor`] : options.catColor;
@@ -27,7 +25,6 @@ function createEar(options, side) {
 }
 
 function createEars(options, idPrefix) {
-  options = { ...defaultOptions, ...options };
   let ears = document.createElement("div");
   ears.setAttribute("class", "ears");
   ears.setAttribute("id", `${idPrefix}-ears`);

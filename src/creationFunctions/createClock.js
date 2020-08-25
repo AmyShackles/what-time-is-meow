@@ -1,7 +1,5 @@
-import { defaultOptions } from '../utils/defaultOptions';
 
 function createClock(ctx, clock, now, options) {
-  options = { ...defaultOptions, ...options };
   if (options.digitalClock) {
     createDigitalClock(clock, now, options);
   } else {

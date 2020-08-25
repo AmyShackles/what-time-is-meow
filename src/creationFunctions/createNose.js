@@ -1,7 +1,5 @@
-import { defaultOptions } from '../utils/defaultOptions';
 
 function createNose(options) {
-  options = { ...defaultOptions, ...options };
   let nose = document.createElement("div");
   nose.setAttribute("class", "nose");
   let roundBit = document.createElement("div");

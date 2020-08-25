@@ -1,7 +1,5 @@
-import { defaultOptions } from '../utils/defaultOptions';
 
 function createTail(options, idPrefix) {
-  options = { ...defaultOptions, ...options };
   let tail = document.createElement("div");
   tail.setAttribute("class", "tail");
   tail.setAttribute("id", `cat${idPrefix}-tail`);

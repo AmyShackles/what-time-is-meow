@@ -1,4 +1,3 @@
-import { defaultOptions } from '../utils/defaultOptions';
 import { createEars } from './createEars';
 import { createHead } from './createHead';
 import { createBody } from './createBody';
@@ -6,7 +5,6 @@ import { createLegs } from './createLegs';
 import { createTail } from './createTail';
 
 function createCat(options, idPrefix) {
-  options = { ...defaultOptions, ...options };
   let cat = document.createElement("div");
   cat.setAttribute("id", `cat${idPrefix}`);
   cat.setAttribute("class", "cat");

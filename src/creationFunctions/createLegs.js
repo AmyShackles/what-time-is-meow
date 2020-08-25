@@ -1,7 +1,5 @@
-import { defaultOptions } from '../utils/defaultOptions';
 
 function createLeg(options, side) {
-  options = { ...defaultOptions, ...options };
   let leg = document.createElement("div");
   leg.setAttribute("class", `${side}-leg`);
   leg.style.backgroundColor =
@@ -14,7 +12,6 @@ function createLeg(options, side) {
 }
 
 function createLegs(options, idPrefix) {
-  options = { ...defaultOptions, ...options };
   let legs = document.createElement("div");
   legs.setAttribute("class", "legs");
   legs.setAttribute("id", `cat${idPrefix}-legs`);

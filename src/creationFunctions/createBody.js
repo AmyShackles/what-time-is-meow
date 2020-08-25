@@ -1,9 +1,7 @@
-import { defaultOptions } from '../utils/defaultOptions';
 import { createArm } from './createArm';
 import { createTorso } from './createTorso';
 
 function createBody(options, idPrefix) {
-  options = { ...defaultOptions, ...options };
   let body = document.createElement("div");
   body.setAttribute("class", "body");
   body.setAttribute("id", `cat${idPrefix}-body`);

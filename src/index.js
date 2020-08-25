@@ -1,12 +1,11 @@
-import { CatFactory, catList } from './classes/CatFactory';
-import { defaultOptions } from './utils/defaultOptions';
+import { CatFactory, catList, defaultOptions} from './classes/CatFactory';
 import { clock } from './animations/clockAnimation';
 import { gsap } from 'gsap';
 import { cats } from './initialization';
 
 // Initialize the cat factory
 let catFactory = new CatFactory();
-
+console.log('defaultOptions', defaultOptions)
 // Create whatever cats you'd like, passing in whatever options you'd like
 catFactory.create('', { digitalClock: true }, true);
 catFactory.create('Asia/Hong_Kong', {

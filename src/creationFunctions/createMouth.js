@@ -1,4 +1,3 @@
-import { defaultOptions } from '../utils/defaultOptions';
 
 function createLip(options, side) {
   let lip = document.createElement("div");
@@ -16,7 +15,6 @@ function createLip(options, side) {
 }
 
 function createMouth(options) {
-  options = { ...defaultOptions, ...options };
   let mouth = document.createElement("div");
   mouth.setAttribute("class", "mouth");
   mouth.style.display = "flex";
