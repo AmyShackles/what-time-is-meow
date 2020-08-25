@@ -1,19 +1,17 @@
 {
   "name": "what-time-is-meow-v2",
   "version": "2.0.0",
-  "description": "Repository to extend a project started on Codepen, in order to safeguard it from the possibility of my cats stepping on the keyboard at an inopportune time and losing all of my code.",
+  "description": "Cat Clock generator",
   "main": "dist/what-time-is-meow.js",
   "scripts": {
     "dev": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "http-server"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["clocks", "cats", "animated"],
+  "author": "Amy Shackles",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "file-loader": "^6.0.0",
-    "http-server": "^0.12.3",
     "react-dom": "^16.13.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
