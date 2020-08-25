@@ -64,4 +64,4 @@ function animate() {
 document.body.appendChild(cats);
 
 const animation = () => animate();
-export { catFactory, defaultOptions, animation }
+export { catFactory, defaultOptions, animation, catList }

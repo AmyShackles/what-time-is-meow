@@ -476,6 +476,8 @@ Timezone options are:
 
 Pass an object of style descriptions as the second argument to `create` function.
 
+e.g. `let sidneyCat = catFactory.create("Australia/Sydney", { catColor: "green" });`
+
 ### To Style a Cat After Creation
 
 Access the cat you'd like to style, then call `addStyles` on that cat, passing in a style object like you would during cat creation.
@@ -499,17 +501,18 @@ function App () {
   catFactory.create();
   animation();
   return (
-    
+    // Whatever else you'd like to render
   )
 }
+```
 
 ## Example Usage
 
 In index.js:
 
 ```javascript
-// Initialize the cat factory
-let catFactory = new CatFactory();
+// Import catFactory to create cats, animation to get tail/ear animation, and defaultOptions to modify defaults
+import { catFactory, animation, defaultOptions } from 'what-time-is-meow-v2';
 
 // Create whatever cats you'd like, passing in whatever options you'd like
 let localCat = catFactory.create();
@@ -530,6 +533,8 @@ catList[1].addStyles({
   secondHandColor: "white",
   clockFaceColor: "rgb(23, 25, 22, 0.3)"
 });
+
+animation();
 ```
 
 ### Notes
