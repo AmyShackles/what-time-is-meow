@@ -495,7 +495,7 @@ You can opt to use military time (24-hour) by passing `{militaryTime: true}` to 
 There is an optional animation included in the package that makes the cat tails swish back and forth and their ears lean from side to side.  If you'd like to utilize this optional animation, simply import it from the package and call it after creating your cats.
 
 ```
-import { catFactory, animation } from 'what-time-is-meow-v2'
+import { catFactory, animation } from 'what-time-is-meow'
 
 function App () {
   catFactory.create();
@@ -512,7 +512,7 @@ In index.js:
 
 ```javascript
 // Import catFactory to create cats, animation to get tail/ear animation, and defaultOptions to modify defaults
-import { catFactory, animation, defaultOptions } from 'what-time-is-meow-v2';
+import { catFactory, animation, defaultOptions } from 'what-time-is-meow';
 
 // Create whatever cats you'd like, passing in whatever options you'd like
 let localCat = catFactory.create();
