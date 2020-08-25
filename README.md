@@ -490,7 +490,7 @@ The border color maps to `defaultOptions.clockOutlineColor`. The background colo
 
 You can opt to use military time (24-hour) by passing `{militaryTime: true}` to the create function.
 
-### Ear and Tail Animation
+### Ear/Mouth/Tail Animation
 
 There is an optional animation included in the package that makes the cat tails swish back and forth and their ears lean from side to side.  If you'd like to utilize this optional animation, simply import it from the package and call it after creating your cats.
 
@@ -522,7 +522,9 @@ let berlinCat = catFactory.create("Europe/Berlin", {
   catColor: "rebeccapurple",
   tailColor: "green"
 });
-
+// Using the catList array on catFactory allows you to target cats for styling
+const catList = catFactory.catList;
+// To change the styling of a cat after creation, use addStyles
 catList[2].addStyles({
   leftEyeColor: "blue",
   minuteMarkColor: "grey",
@@ -534,6 +536,7 @@ catList[1].addStyles({
   clockFaceColor: "rgb(23, 25, 22, 0.3)"
 });
 
+// In order to get tail/ear/mouth animation working, invoke the animation function
 animation();
 ```
 

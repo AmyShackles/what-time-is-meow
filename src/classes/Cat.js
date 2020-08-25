@@ -86,7 +86,6 @@ class Cat {
   }
   styleCat([attribute, value]) {
     const cat = this.cat;
-    console.log('cat', cat)
     attribute = attribute.replace(/cat/i, '');
     attribute = attribute[0].toLowerCase() + attribute.slice(1);
     if (attribute === 'color') {
