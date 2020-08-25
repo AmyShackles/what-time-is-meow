@@ -52,6 +52,8 @@ class Cat {
           this.stylePhiltrum([key, value]);
         } else if (/ear/i.test(key)) {
           this.styleEar([key, value], side);
+        } else {
+          this.options[key] = value;
         }
       });
     }
