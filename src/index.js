@@ -2,7 +2,7 @@ import { CatFactory, catList } from './classes/CatFactory';
 import { defaultOptions } from './utils/defaultOptions';
 import { clock } from './animations/clockAnimation';
 import { gsap } from 'gsap';
-
+import { cats } from './initialization';
 
 // Initialize the cat factory
 let catFactory = new CatFactory();
@@ -22,6 +22,7 @@ catList[1].addStyles({
   secondHandColor: "white",
   clockFaceColor: "rgb(23, 25, 22, 0.3)"
 });
+
 window.requestAnimationFrame(clock);
 
 function animate() {
@@ -62,6 +63,7 @@ function animate() {
     .to(".tail", { duration: 8, rotationY: 0, rotationX: 0, x: 0 }, "second");
     return animation;
 }
+document.body.appendChild(cats);
 
 const animation = () => animate();
 export { catFactory, defaultOptions, animation }

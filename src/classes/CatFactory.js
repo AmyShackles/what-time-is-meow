@@ -1,5 +1,5 @@
 import { defaultOptions } from '../utils/defaultOptions';
-import { catInit, timeZoneList } from '../initialization';
+import { catInit, timeZoneList, cats } from '../initialization';
 import { getTimeZone } from '../utils/getTimeZone';
 import { createClock } from '../creationFunctions/createClock';
 import { updateEye } from '../animations/eyeAnimation';
@@ -58,7 +58,7 @@ function CatFactory() {
       const { isDefault } = cat;
 
       if (isDefault) {
-        document.body.removeChild(catDiv);
+        cats.removeChild(catDiv);
       } else {
         remainingCats.push(cat)
       }
