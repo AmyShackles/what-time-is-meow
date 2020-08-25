@@ -23,6 +23,38 @@ class Cat {
     this.cat = cat;
     this.options = options;
     this.isDefault = isDefault;
+    this.addStyles =  function(styles) {
+      Object.entries(styles).forEach(([key, value]) => {
+        let side = /right/.test(key) ? "right" : "left";
+        if (/(?:browridge)|(?:eyes)/gi.test(key)) {
+          this.styleEyes([key, value]);
+        } else if (/(?:frontpaw)|(?:arm)/gi.test(key)) {
+          this.styleLimb([key, value], side, "arm");
+        } else if (/(?:backpaw)|(?:leg)/gi.test(key)) {
+          this.styleLimb([key, value], side, "leg");
+        } else if (/sclera|pupil|eye/gi.test(key)) {
+          this.styleEye([key, value], side);
+        } else if (/(?:clockWidth)|(?:clockHeight)/gi.test(key)) {
+          this.styleClock([key, value]);
+        } else if (
+          /(?:minute)|(?:hour)|(?:second)|(?:clockface)|(?:clockoutline)/gi.test(
+            key
+          )
+        ) {
+          this.options[key] = value;
+        } else if (/head/gi.test(key)) {
+          this.styleHead([key, value]);
+        } else if (/nose/i.test(key)) {
+          this.styleNose([key, value]);
+        } else if (/nostril/i.test(key)) {
+          this.styleNostril([key, value]);
+        } else if (/philtrum/i.test(key)) {
+          this.stylePhiltrum([key, value]);
+        } else if (/ear/i.test(key)) {
+          this.styleEar([key, value], side);
+        }
+      });
+    }
   }
   styleEar([attribute, value], side) {
     const ear = this.cat.querySelector(`.${side}-ear`);
@@ -128,38 +160,7 @@ class Cat {
     }
     philtrum.style[attribute] = value;
   }
-  addStyles(styles) {
-    Object.entries(styles).forEach(([key, value]) => {
-      let side = /right/.test(key) ? "right" : "left";
-      if (/(?:browridge)|(?:eyes)/gi.test(key)) {
-        this.styleEyes([key, value]);
-      } else if (/(?:frontpaw)|(?:arm)/gi.test(key)) {
-        this.styleLimb([key, value], side, "arm");
-      } else if (/(?:backpaw)|(?:leg)/gi.test(key)) {
-        this.styleLimb([key, value], side, "leg");
-      } else if (/sclera|pupil|eye/gi.test(key)) {
-        this.styleEye([key, value], side);
-      } else if (/(?:clockWidth)|(?:clockHeight)/gi.test(key)) {
-        this.styleClock([key, value]);
-      } else if (
-        /(?:minute)|(?:hour)|(?:second)|(?:clockface)|(?:clockoutline)/gi.test(
-          key
-        )
-      ) {
-        this.options[key] = value;
-      } else if (/head/gi.test(key)) {
-        this.styleHead([key, value]);
-      } else if (/nose/i.test(key)) {
-        this.styleNose([key, value]);
-      } else if (/nostril/i.test(key)) {
-        this.styleNostril([key, value]);
-      } else if (/philtrum/i.test(key)) {
-        this.stylePhiltrum([key, value]);
-      } else if (/ear/i.test(key)) {
-        this.styleEar([key, value], side);
-      }
-    });
-  }
+
 }
 
 export { Cat }
