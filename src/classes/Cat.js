@@ -52,10 +52,64 @@ class Cat {
           this.stylePhiltrum([key, value]);
         } else if (/ear/i.test(key)) {
           this.styleEar([key, value], side);
-        } else {
-          this.options[key] = value;
+        } else if (/lip/i.test(key)) {
+          this.styleLip([key, value]);
+        } else if (/torso/i.test(key)) {
+          this.styleTorso([key, value]);
+        } else if (/tail/i.test(key)) {
+          this.styleTail([key, value]);
+        } else if (/cat/i.test(key)) {
+          this.styleCat([key, value])
         }
       });
+    }
+  }
+  styleLip([attribute, value]) {
+    const lips = this.cat.querySelectorAll(`.mouth .left-side, .mouth .right-side`);
+    attribute = attribute.replace(/lip/i, '');
+    attribute = attribute[0].toLowerCase() + attribute.slice(1);
+    lips.forEach(lip => {
+      lip.style[attribute] = value;
+    })
+  }
+  styleTorso([attribute, value]) {
+    const torso = this.cat.querySelector('.torso');
+    attribute = attribute.replace(/toso/i, '');
+    attribute = attribute[0].toLowerCase() + attribute.slice(1);
+    torso.style[attribute] = value;
+  }
+  styleTail([attribute, value]) {
+    const tail = this.cat.querySelector('.tail');
+    attribute = attribute.replace(/tail/i, '');
+    attribute = attribute[0].toLowerCase() + attribute.slice(1);
+    tail.style[attribute] = value;
+  }
+  styleCat([attribute, value]) {
+    const cat = this.cat;
+    console.log('cat', cat)
+    attribute = attribute.replace(/cat/i, '');
+    attribute = attribute[0].toLowerCase() + attribute.slice(1);
+    if (attribute === 'color') {
+      const arms = this.cat.querySelectorAll('.left-arm, .right-arm');
+      arms.forEach(arm => {
+        arm.style.backgroundColor = value;
+      })
+      const legs = this.cat.querySelectorAll('.left-leg, .right-leg');
+      legs.forEach(leg => {
+        leg.style.backgroundColor = value;
+      });
+      const ears = this.cat.querySelectorAll('.left-ear, .right-ear');
+      ears.forEach(ear => {
+        ear.style.borderBottomColor = value;
+      });
+      const head = this.cat.querySelector('.head');
+      head.style.backgroundColor = value;
+      const torso = this.cat.querySelector('.torso');
+      torso.style.backgroundColor = value;
+      const tail = this.cat.querySelector('.tail');
+      tail.style.borderColor = value;
+    } else {
+      cat.style[attribute] = value;
     }
   }
   styleEar([attribute, value], side) {

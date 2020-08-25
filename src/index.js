@@ -18,7 +18,8 @@ catList[2].addStyles({
 catList[1].addStyles({
   leftBackPawColor: "red",
   secondHandColor: "white",
-  clockFaceColor: "rgb(23, 25, 22, 0.3)"
+  clockFaceColor: "rgb(23, 25, 22, 0.3)",
+  catColor: 'rebeccapurple',
 });
 
 window.requestAnimationFrame(clock);
