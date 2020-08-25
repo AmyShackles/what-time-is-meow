@@ -67,7 +67,6 @@ function CatFactory() {
     this.catList = catList;
   }
   this.updateDefaultOptions = function(update) {
-    console.log('catList', catList)
     Object.entries(update).map(([key, value]) => {
       defaultOptions[key] = value;
     })

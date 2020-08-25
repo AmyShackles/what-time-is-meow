@@ -5,7 +5,6 @@ import { cats } from './initialization';
 
 // Initialize the cat factory
 let catFactory = new CatFactory();
-console.log('defaultOptions', defaultOptions)
 // Create whatever cats you'd like, passing in whatever options you'd like
 catFactory.create('', { digitalClock: true }, true);
 catFactory.create('Asia/Hong_Kong', {
