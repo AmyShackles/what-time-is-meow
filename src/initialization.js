@@ -5,6 +5,7 @@ const cats = document.createElement('div');
 cats.setAttribute('id', 'cats');
 cats.setAttribute('class', 'cats');
 cats.style.display = "flex";
+cats.style.flexWrap = "wrap";
 const screen = document.defaultView.screen;
 const availableWidth = screen.availWidth;
 function catInit(options) {
