@@ -1,6 +1,6 @@
 # What Time is Meow?
 
-Repository to extend a project started on Codepen, in order to safeguard it from the possibility of my cats stepping on the keyboard at an inopportune time and losing all of my code.
+What Time is Meow? is a highly configurable animated cat clock generator.
 
 **Cat Diagram**
 
